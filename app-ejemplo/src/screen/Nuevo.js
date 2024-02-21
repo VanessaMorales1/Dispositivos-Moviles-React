@@ -16,7 +16,7 @@ const Pdf = () => {
             data.append('question', question)
             data.append('file', pdfDoc)
             console.log(data.get('file'))
-            const response = await fetch('http://192.168.200.6:9004/upload', {
+            const response = await fetch('http://192.168.200.6:9004/upload2', {
                 method: 'POST',
                 body: data
             })
@@ -34,8 +34,8 @@ const Pdf = () => {
     }
 
     return (
-        <View>
-            <Button title={'Select PDF'} onPress={handleFilePicker}/>
+        <View style={styles.container}>
+            <Button title={'Select PDF'} onPress={handleFilePicker} />
             <TextInput style={styles.input} value={question} onChangeText={setQuestion}
                        placeholder={'Ingresa tu pregunta'}/>
             <Button title={'send'} onPress={handleUpload}/>
@@ -44,6 +44,12 @@ const Pdf = () => {
     )
 }
 const styles = StyleSheet.create({
+    container: {
+       // flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 30, // Agrega paddingTop aquí para mover los elementos hacia abajo
+    },
     input: {
         backgroundColor: 'white',
         borderWidth: 1,

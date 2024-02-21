@@ -8,7 +8,7 @@ const Chat = () => {
 
     const getResultFromOpenApi = async () => {
         try {
-            const response = await fetch('http://localhost:9004/openapi', {
+            const response = await fetch('http://192.168.200.6:9004/openapi', {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'
@@ -26,7 +26,7 @@ const Chat = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>
-                {'Ingrese El numero que desea convertir a binario'}
+                {'Ingrese el número que desea convertir a binario'}
             </Text>
             <TextInput style={styles.input} value={prompt} onChangeText={setPrompt}/>
             <Button title={'Enviar'} onPress={getResultFromOpenApi}/>

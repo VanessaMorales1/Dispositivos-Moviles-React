@@ -10,10 +10,10 @@ const ListComponent = () => {
     const [showProfile,setShowProfile]=useState(false)
     const [task,setTask]=useState()
     useEffect(() => {
-        axiosData()
+        fetchData()
     }, [])
 
-  /*  const fetchData = async () => {
+   const fetchData = async () => {
         try {
             const response = await fetch('https://api.unsplash.com/photos/?client_id=tmXX2qlmRsZbsX7eXhvWsY1wfSpKeQj6fU9EQN0fkAw')
             const jsonData = await response.json()
@@ -22,9 +22,9 @@ const ListComponent = () => {
         } catch (e) {
             console.error('error', e)
         }
-    }*/
+    }
 
-    const axiosData = async () => {
+  /*  const axiosData = async () => {
         try {
             const response = await axios('https://api.unsplash.com/photos/?client_id=tmXX2qlmRsZbsX7eXhvWsY1wfSpKeQj6fU9EQN0fkAw')
             const jsonData = await response.data
@@ -33,12 +33,14 @@ const ListComponent = () => {
         } catch (e) {
             console.error('error', e)
         }
-    }
+    }*/
     const Item = ({task, i}) => {
         return (
             <TouchableOpacity style={styles.perItem} key={i} onPress={() => {
                 getProfile(task)
             }}>
+
+                
                 <Task task={task}/>
             </TouchableOpacity>
         )

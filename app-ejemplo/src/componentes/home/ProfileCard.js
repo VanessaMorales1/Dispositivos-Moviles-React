@@ -9,8 +9,8 @@ const youtube = <Icon name={'youtube'} size={30} color={'black'}/>
 const twitch = <Icon name={'twitch'} size={30} color={'black'}/>
 const ProfileCard = () => {
     const user = {
-        avatar: "https://wallpapercave.com/wp/wp12429250.jpg",
-        coverPhoto: "https://wallpapercave.com/wp/wp8271370.jpg",
+        avatar: 'https://images.unsplash.com/photo-1707682689100-327ab825a40e?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        coverPhoto: 'https://images.unsplash.com/photo-1707682689100-327ab825a40e?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         name: "Vanessa Morales"
     }
     return (
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     },
     coverPhoto: {
         width: '100%',
-        height: 300,
-        resizeMode: 'cover'
+        height: 200,
+       // resizeMode: 'cover'
 
     },
     avatarContainer: {
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
     },
     avatar: {
         width: 150,
-        height: 150,
+        height: 100,
         borderRadius: 75,
-        borderWidth: 10,
+        borderWidth: 5,
         borderColor: 'white'
     },
     name: {
